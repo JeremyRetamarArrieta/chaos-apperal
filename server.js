@@ -3,16 +3,22 @@ const app = express()
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 // const data = require('./product')
+const path = require("path")
 
 
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 app.use("/products" , require ('./routes/estoreRoutes.js'))
 
-mongoose.connect("mongodb://localhost:27017/products-db", {useNewUrlParser: true}, () => {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/products-db", {useNewUrlParser: true}, () => {
     console.log('[XD] connected to DB')
+})
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 })
 
 app.listen(7000, () => {
