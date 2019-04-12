@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hkunzler/group-project.git"
+    "url": "git+https://github.com/JeremyRetamarArrieta/chaos-apperal.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hkunzler/group-project/issues"
+    "url": "https://github.com/JeremyRetamarArrieta/chaos-apperal/issues"
   },
-  "homepage": "https://github.com/hkunzler/group-project#readme",
+  "homepage": "https://github.com/JeremyRetamarArrieta/chaos-apperal#readme",
   "dependencies": {
     "express": "^4.16.4",
     "mongoose": "^5.4.19",
